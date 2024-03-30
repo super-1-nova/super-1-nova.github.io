@@ -1,5 +1,3 @@
-import './style.css'
-
 const sillyJSON = document.querySelector("textarea");
 const sillyOutput = document.querySelector("iframe");
 
