@@ -4,20 +4,125 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Json2HTML</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://raheelize.github.io/CrispyToastJS/crispy-toast.css"
+    />
+    <script src="https://raheelize.github.io/CrispyToastJS/crispy-toast.js"></script>
+
+    <link rel="icon" type="image/png" href="./favicon.png" />
   </head>
   <body>
     <div id="app">
-        <textarea placeholder="entery silly json html">{
-    "html": {
-        "body": {
-            "h1": "Hello, Silly",
-            "h1.class": "silly"
-        }
-    }
-}</textarea>
-        <iframe frameborder="0"></iframe>
+      <div class="header">
+        <a
+          href="./"
+          class="title"
+          style="
+            align-items: center;
+            display: flex;
+            gap: 8px;
+            text-decoration: none;
+            color: var(--text);
+          "
+        >
+          <img width="32" src="./favicon.png" alt="HTML5" />
+          JSONHTML
+        </a>
+
+        <div>
+          <select id="loadSelect">
+            <option value="choose">Load Save</option>
+          </select>
+          <button id="saveButton" class="save">Save</button>
+        </div>
+      </div>
+      <div class="content">
+        <div class="left">
+          <div class="top" id="rawJSON">
+            <div class="widgetHeader">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="yellow"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="icon icon-tabler icons-tabler-outline icon-tabler-braces"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path
+                  d="M7 4a2 2 0 0 0 -2 2v3a2 3 0 0 1 -2 3a2 3 0 0 1 2 3v3a2 2 0 0 0 2 2"
+                />
+                <path
+                  d="M17 4a2 2 0 0 1 2 2v3a2 3 0 0 0 2 3a2 3 0 0 0 -2 3v3a2 2 0 0 1 -2 2"
+                />
+              </svg>
+              <span style="margin-right: 16px">JSON</span>
+              <!-- <select>
+                <option value="choose">Choose Template</option>
+                <option value="helloWorld">Hello, World!</option>
+                <option value="buttonCounter">Button Counter</option>
+              </select> -->
+              <button class="copy" id="copyRawJson">Copy</button>
+            </div>
+
+            <textarea spellcheck="false" id="rawJSONInput"></textarea>
+          </div>
+          <div class="bottom" id="rawHTML">
+            <div class="widgetHeader">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="red"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="icon icon-tabler icons-tabler-outline icon-tabler-brand-html5"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M20 4l-2 14.5l-6 2l-6 -2l-2 -14.5z" />
+                <path
+                  d="M15.5 8h-7l.5 4h6l-.5 3.5l-2.5 .75l-2.5 -.75l-.1 -.5"
+                />
+              </svg>
+              <span>RAW HTML</span>
+              <button style="margin-left: 16px" class="copy" id="copyRawHtml">
+                Copy
+              </button>
+            </div>
+
+            <textarea readonly spellcheck="false" id="rawHTMLOutput"></textarea>
+          </div>
+        </div>
+        <div class="right" id="renderedHTML">
+          <div class="widgetHeader">
+            <img width="24" height="24" src="./favicon.png" alt="HTML5" />
+            <span>LIVE VIEW</span>
+          </div>
+          <iframe></iframe>
+        </div>
+      </div>
     </div>
-    <script type="module" src="main.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.47.0/min/vs/loader.min.js"
+      integrity="sha512-ZG31AN9z/CQD1YDDAK4RUAvogwbJHv6bHrumrnMLzdCrVu4HeAqrUX7Jsal/cbUwXGfaMUNmQU04tQ8XXl5Znw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script type="module" defer src="main.js"></script>
   </body>
 </html>
