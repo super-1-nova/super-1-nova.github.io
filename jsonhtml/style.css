@@ -1,0 +1,21 @@
+html, body {
+    margin: 0;
+    overflow: hidden;
+    min-height: 100vh;
+}
+
+#app {
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+#app > * {
+    flex: 1;
+    max-width: 50%;
+}
+
+pre, code {
+    word-wrap: break-all;
+    white-space: wrap;
+}
