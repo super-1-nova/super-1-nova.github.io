@@ -1,7 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap");
 
+@font-face {
+  font-family: 'Papyrus';
+  src: url('./papyrus.ttf') format('ttf');
+}
+
 * {
-  font-family: "Pixelify Sans";
+  font-family: "Papyrus";
   color: #fff;
 }
 html,
