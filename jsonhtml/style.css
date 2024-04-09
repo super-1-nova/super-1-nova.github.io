@@ -2,11 +2,11 @@
 
 :root {
   --text: hsl(136, 38%, 94%);
-  --background: hsl(138, 46%, 7%);
-  --background-lighter: hsl(138, 46%, 10%);
-  --primary: hsl(138, 56%, 73%);
-  --secondary: hsl(138, 65%, 31%);
-  --accent: hsl(138, 75%, 50%);
+  --background: hsl(278, 44%, 7%);
+  --background-lighter: hsl(292, 45%, 10%);
+  --primary: hsl(283, 56%, 73%);
+  --secondary: hsl(288, 65%, 31%);
+  --accent: hsl(288, 75%, 50%);
 }
 
 * {
